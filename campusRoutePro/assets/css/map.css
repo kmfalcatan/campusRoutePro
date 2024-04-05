@@ -1,0 +1,833 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: white;
+}
+
+.container{
+    outline: red dashed 1px;
+    height: 100vh;
+}
+
+.headerContainer{
+    outline: red dashed 1px;
+    height: 5rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+}
+
+.subHeaderContainer{
+    height: 4rem;
+    width: 100%;
+    outline: red dashed 1px;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    margin: 0 1rem;
+    background-color: rgb(167,0,0);
+}
+
+.homeContainer{
+    outline: white dashed 1px;
+    height: 3rem;
+    width: 3rem;
+    margin-left: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5rem;
+    cursor: pointer;
+    transition: all 0.15s;
+    border: solid white 1px;
+}
+
+.homeContainer:hover{
+    background-color: snow;
+    border: solid black 1px;
+}
+
+.homeContainer:active{
+    transform: scale(0.9);
+}
+
+.home{
+    height: 2rem;
+    transition: all 0.15s;
+}
+
+.home:hover{
+    filter: invert();
+}
+
+.textContainer{
+    outline: white dashed 1px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: white;
+    font-weight: bold;
+    margin-left: 20%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.searchBarContainer{
+    outline: white dashed 1px;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.destinationContainer{
+    outline: white dashed 1px;
+    height: 100%;
+    width: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.homeContainer1{
+    outline: white dashed 1px;
+    height: 3rem;
+    width: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5rem;
+    cursor: pointer;
+    transition: all 0.15s;
+    border: solid white 1px;
+}
+
+.homeContainer1:hover{
+    background-color: snow;
+    border: solid black 1px;
+}
+
+.homeContainer1:active{
+    transform: scale(0.9);
+}
+
+.subSearchBarContainer{
+    outline: white dashed 1px;
+    height: 100%;
+    width: 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search{
+    height: 3rem;
+    width: 90%;
+    border-radius: 1rem;
+    border: solid white 1px;
+    text-align: center;
+    font-size: 1.2rem;
+    background-color: rgba(255, 255, 255, 0.555);
+    color: white;
+}
+
+.subContainer{
+    outline: red dashed 1px;
+    display: grid;
+    grid-template-columns: 1fr;
+    height: 100vh;
+    transform-origin: top left;
+    justify-content: center;
+    align-items: center;
+}
+
+.zoomContainer{
+    outline: red dashed 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: fixed;
+    width: 5rem;
+    height: 100%;
+}
+
+.zoomInContainer{
+    outline: red dashed 1px;
+    height: 3rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.subZoomIn{
+    outline: red dashed 1px;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 5rem;
+    border: solid black 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.15s;
+}
+
+.subZoomIn:hover{
+    color: white;
+    background-color: rgb(167,0,0);
+}
+
+.subZoomIn:active{
+    transform: scale(0.9);
+}
+
+.plus{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.plus1{
+    font-size: 2rem;
+    font-weight: bold;
+    padding-bottom: 0.4rem;
+}
+
+.mapContainer{
+    outline: red dashed 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5rem;
+    margin-top: 5rem;
+}
+
+.subMapContainer{
+    height: 100%;
+    width: 100%;
+    outline: red dashed 1px;
+    position: relative;
+}
+
+.map{
+    height: 93rem;
+}
+
+.subDestinationContainer{
+    outline: red dashed 1px;
+    position: absolute;
+    height: 15rem;
+    width: 30rem;
+    top: 4.5rem;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    margin-right: 29rem;
+    animation: open 1s linear;
+}
+
+.openSideBar{
+    outline: red dashed 1px;
+    position: absolute;
+    height: 15rem;
+    width: 30rem;
+    top: 4.5rem;
+    left: 0;
+    display: flex;
+    margin-left: 29rem;
+    flex-direction: row;
+    animation: close 1s linear;
+}
+
+.closeButtonContainer{
+    outline: red dashed 1px;
+    height: 100%;
+    width: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.subCloseButtonContainer{
+    outline: red dashed 1px;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 5rem;
+    border: solid black 1px;
+    background-color: rgb(167,0,0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.close{
+    height: 1.5rem;
+
+    animation: rotateLeft 0.5s linear;
+}
+
+.rotate{
+    height: 1.5rem;
+    transform: rotate(180deg);
+    animation: rotateRight 0.5s linear;
+}
+
+.inputContainer{
+    height: 100%;
+    width: 28rem;
+    outline: red dashed 1px;
+    background-color: rgb(167,0,0);
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.imageContainer{
+    outline: white dashed 1px;
+    height: 100%;
+    width: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.subInputContainer{
+    outline: white dashed 1px;
+    height: 100%;
+    width: 25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.startContainer{
+    outline: white dashed 1px;
+    height: 6rem;
+    width: 23rem;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.label{
+    width: 100%;
+    height: 2rem;
+    outline: white dashed 1px;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 1.2rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+.subStartContainer{
+    outline: white dashed 1px;
+    height: 3rem;
+    width: 100%;
+}
+
+.inputStart{
+    height: 100%;
+    width: 22.5rem;
+    border-radius: 0.5rem;
+    border: none;
+    font-size: 1.2rem;padding-left: 0.5rem;
+}
+
+.subPinContainer{
+    outline: red dashed 1px;
+    height: 100%;
+    width: 100%;
+    border-radius: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.15s;
+}
+
+.pin{
+    height: 2rem;
+}
+
+.subPinContainer img:hover{
+    filter: invert(100%);
+}
+
+.subPinContainer:hover{
+    background-color: rgb(167,0,0);
+}
+
+.subPinContainer:active{
+    transform: scale(0.9);
+}
+
+.subInfoContainer{
+    outline: white dashed 1px;
+    height: 10rem;
+}
+
+.image1{
+    height: 100%;
+    width: 100%;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.collegeContainer{
+    outline: white dashed 1px;
+    display: flex;
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.pinContainer{
+    outline: black dashed 1px;
+    position: absolute;
+    top: 25rem;
+    left: 11.3rem;
+    height: 3rem;
+    width: 3rem;
+}
+
+.pinContainer1{
+    outline: black dashed 1px;
+    position: absolute;
+    top: 18rem;
+    left: 21rem;
+    height: 3rem;
+    width: 3rem;
+}
+
+.pinContainer2{
+    outline: black dashed 1px;
+    position: absolute;
+    top: 18rem;
+    left: 26.7rem;
+    height: 3rem;
+    width: 3rem;
+}
+
+.pinContainer3{
+    outline: black dashed 1px;
+    position: absolute;
+    top: 18rem;
+    left: 33.3rem;
+    height: 3rem;
+    width: 3rem;
+}
+
+.pinContainer4{
+    outline: black dashed 1px;
+    position: absolute;
+    top: 18rem;
+    left: 40.5rem;
+    height: 3rem;
+    width: 3rem;
+}
+
+.pinContainer5{
+    outline: black dashed 1px;
+    position: absolute;
+    top: 18rem;
+    left: 51rem;
+    height: 3rem;
+    width: 3rem;
+}
+
+.pinContainer6{
+    outline: black dashed 1px;
+    position: absolute;
+    top: 18rem;
+    left: 55.7rem;
+    height: 3rem;
+    width: 3rem;
+}
+
+.pinContainer7{
+    outline: black dashed 1px;
+    position: absolute;
+    top: 18rem;
+    left: 62.9rem;
+    height: 3rem;
+    width: 3rem;
+}
+
+.pinContainer8{
+    outline: black dashed 1px;
+    position: absolute;
+    top: 18rem;
+    left: 85.9rem;
+    height: 3rem;
+    width: 3rem;
+}
+
+.pinContainer9{
+    outline: black dashed 1px;
+    position: absolute;
+    top: 13.5rem;
+    left: 88.2rem;
+    height: 3rem;
+    width: 3rem;
+}
+
+.pinContainer10{
+    outline: black dashed 1px;
+    position: absolute;
+    top: 13.5rem;
+    left: 66rem;
+    height: 3rem;
+    width: 3rem;
+}
+
+.pinContainer11{
+    outline: black dashed 1px;
+    position: absolute;
+    top: 13.5rem;
+    left: 38rem;
+    height: 3rem;
+    width: 3rem;
+}
+
+.pinContainer12{
+    outline: black dashed 1px;
+    position: absolute;
+    top: 29.5rem;
+    left: 22.2rem;
+    height: 3rem;
+    width: 3rem;
+}
+
+.pinContainer13{
+    outline: black dashed 1px;
+    position: absolute;
+    top: 33.5rem;
+    left: 23.9rem;
+    height: 3rem;
+    width: 3rem;
+}
+
+.pinContainer14{
+    outline: black dashed 1px;
+    position: absolute;
+    top: 43.5rem;
+    left: 18.5rem;
+    height: 3rem;
+    width: 3rem;
+}
+
+.pinContainer15{
+    outline: black dashed 1px;
+    position: absolute;
+    top: 43.5rem;
+    left: 39.5rem;
+    height: 3rem;
+    width: 3rem;
+}
+
+.pinContainer16{
+    outline: black dashed 1px;
+    position: absolute;
+    top: 43.5rem;
+    left: 56rem;
+    height: 3rem;
+    width: 3rem;
+}
+
+.pinContainer17{
+    outline: black dashed 1px;
+    position: absolute;
+    top: 43.5rem;
+    left: 75.5rem;
+    height: 3rem;
+    width: 3rem;
+}
+
+.pinContainer18{
+    outline: black dashed 1px;
+    position: absolute;
+    top: 35.5rem;
+    left: 75.5rem;
+    height: 3rem;
+    width: 3rem;
+}
+
+.pinContainer19{
+    outline: black dashed 1px;
+    position: absolute;
+    top: 27.5rem;
+    left: 67rem;
+    height: 3rem;
+    width: 3rem;
+}
+
+.pinContainer20{
+    outline: black dashed 1px;
+    position: absolute;
+    top: 21.5rem;
+    left: 74rem;
+    height: 3rem;
+    width: 3rem;
+}
+
+.pinContainer21{
+    outline: black dashed 1px;
+    position: absolute;
+    top: 47.5rem;
+    left: 24rem;
+    height: 3rem;
+    width: 3rem;
+}
+
+.pinContainer22{
+    outline: black dashed 1px;
+    position: absolute;
+    top: 47.5rem;
+    left: 54rem;
+    height: 3rem;
+    width: 3rem;
+}
+
+.pinContainer23{
+    outline: black dashed 1px;
+    position: absolute;
+    top: 49rem;
+    left: 62.3rem;
+    height: 3rem;
+    width: 3rem;
+}
+
+.pinContainer24{
+    outline: black dashed 1px;
+    position: absolute;
+    top: 31rem;
+    left: 7rem;
+    height: 3rem;
+    width: 3rem;
+}
+
+.pinContainer25{
+    outline: black dashed 1px;
+    position: absolute;
+    top: 51rem;
+    left: 36.15rem;
+    height: 3rem;
+    width: 3rem;
+}
+
+.pinContainer26{
+    outline: black dashed 1px;
+    position: absolute;
+    top: 51rem;
+    left: 46.7rem;
+    height: 3rem;
+    width: 3rem;
+}
+
+.pinContainer27{
+    outline: black dashed 1px;
+    position: absolute;
+    top: 61rem;
+    left: 67.7rem;
+    height: 3rem;
+    width: 3rem;
+}
+
+.pinContainer28{
+    outline: black dashed 1px;
+    position: absolute;
+    top: 60rem;
+    left: 74.7rem;
+    height: 3rem;
+    width: 3rem;
+}
+
+.pinContainer29{
+    outline: black dashed 1px;
+    position: absolute;
+    top: 66rem;
+    left: 63.9rem;
+    height: 3rem;
+    width: 3rem;
+}
+
+.pinContainer30{
+    outline: black dashed 1px;
+    position: absolute;
+    top: 75rem;
+    left: 69.5rem;
+    height: 3rem;
+    width: 3rem;
+}
+
+.pinContainer31{
+    outline: black dashed 1px;
+    position: absolute;
+    top: 77rem;
+    left: 66rem;
+    height: 3rem;
+    width: 3rem;
+}
+
+.pinContainer32{
+    outline: black dashed 1px;
+    position: absolute;
+    top: 69rem;
+    left: 76rem;
+    height: 3rem;
+    width: 3rem;
+}
+
+.pinContainer33{
+    outline: black dashed 1px;
+    position: absolute;
+    top: 84.7rem;
+    left: 65.7rem;
+    height: 3rem;
+    width: 3rem;
+}
+
+.pinContainer34{
+    outline: black dashed 1px;
+    position: absolute;
+    top: 86rem;
+    left: 73.7rem;
+    height: 3rem;
+    width: 3rem;
+}
+
+.pinContainer35{
+    outline: black dashed 1px;
+    position: absolute;
+    top: 83rem;
+    left: 74.5rem;
+    height: 3rem;
+    width: 3rem;
+}
+
+.pinContainer36{
+    outline: black dashed 1px;
+    position: absolute;
+    top: 77rem;
+    left: 78.3rem;
+    height: 3rem;
+    width: 3rem;
+}
+
+.pinContainer37{
+    outline: black dashed 1px;
+    position: absolute;
+    top: 73rem;
+    left: 84.2rem;
+    height: 3rem;
+    width: 3rem;
+}
+
+.pinContainer38{
+    outline: black dashed 1px;
+    position: absolute;
+    top: 73rem;
+    left: 86.8rem;
+    height: 3rem;
+    width: 3rem;
+}
+
+.pinContainer39{
+    outline: black dashed 1px;
+    position: absolute;
+    top: 74rem;
+    left: 91.3rem;
+    height: 3rem;
+    width: 3rem;
+}
+
+.pinContainer40{
+    outline: black dashed 1px;
+    position: absolute;
+    top: 78rem;
+    left: 86rem;
+    height: 3rem;
+    width: 3rem;
+}
+
+.pinContainer41{
+    outline: black dashed 1px;
+    position: absolute;
+    top: 76rem;
+    left: 93rem;
+    height: 3rem;
+    width: 3rem;
+}
+
+.infoContainer, .infoContainer1, .infoContainer2, .infoContainer3, .infoContainer4, 
+.infoContainer5, .infoContainer6, .infoContainer7, .infoContainer8, .infoContainer9, 
+.infoContainer10, .infoContainer11, .infoContainer12, .infoContainer13, .infoContainer14,
+.infoContainer15, .infoContainer16, .infoContainer17, .infoContainer18, .infoContainer19,
+.infoContainer20, .infoContainer21, .infoContainer22, .infoContainer23, .infoContainer24, 
+.infoContainer25, .infoContainer26, .infoContainer27, .infoContainer28, .infoContainer29, 
+.infoContainer30, .infoContainer31, .infoContainer32, .infoContainer33, .infoContainer34, 
+.infoContainer35, .infoContainer36, .infoContainer37, .infoContainer38, .infoContainer39, 
+.infoContainer40, .infoContainer41{
+    outline: red dashed 1px;
+    width: 15rem;
+    position: absolute;
+    right: -6rem;
+    border-radius: 1rem;
+    background-color: rgb(167,0,0);
+    margin-top: 0.5rem;
+    border: solid rgb(167,0,0) 1px;
+}
+
+@keyframes close {
+    from{
+        margin: 0;
+    } to{
+        margin-left: 29rem;
+    }
+}
+
+@keyframes open {
+    from{
+        margin-left: 29rem;
+    } to{
+        margin: 0;
+    }
+}
+
+@keyframes rotateRight {
+    0%{
+        transform: rotate(0deg);
+    } 100%{
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes rotateLeft {
+    from{
+        transform: rotate(180deg);
+    } to{
+        transform: rotate(0deg);
+    }
+}
