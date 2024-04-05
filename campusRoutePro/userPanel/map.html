@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../assets/css/map.css">
+</head>
+<body>
+    <div class="container">
+        <div style="z-index: 1;" class="headerContainer">
+            <div class="subHeaderContainer">
+                <a href="../userPanel/homePage.html">
+                    <div class="homeContainer">
+                        <img class="home" src="../assets/img/home (1).png" alt="">
+                    </div>
+                </a>
+
+                <div class="textContainer">
+                    <p>CAMPUS ROUTE PRO</p>
+                </div>
+
+                <div class="searchBarContainer">
+                    <div class="destinationContainer">
+                        <div class="homeContainer1" onclick="popUp2()">
+                            <img class="home" src="../assets/img/corner-up-right.png" alt="">
+                        </div>
+
+                        <div class="subDestinationContainer" style="display: none;">
+                            <div class="closeButtonContainer">
+                                <div class="subCloseButtonContainer">
+                                    <img class="close" src="../assets/img/chevron-right.png" alt="">
+                                </div>
+                            </div>
+
+                            <div class="inputContainer">
+                                <div class="imageContainer">
+                                    <img src="../assets/img/434003985_749654080630028_4658609900624472111_n-removebg-preview.png" alt="">
+                                </div>
+
+                                <div class="subInputContainer">
+                                    <div class="startContainer">
+                                        <div class="label">
+                                            <p>Starting point</p>
+                                        </div>
+
+                                        <div class="subStartContainer">
+                                            <input class="inputStart" type="text" placeholder="Type here...">
+                                        </div>
+                                    </div>
+
+                                    <div class="startContainer">
+                                        <div class="label">
+                                            <p>Starting point</p>
+                                        </div>
+
+                                        <div class="subStartContainer">
+                                            <input class="inputStart" type="text" placeholder="Type here...">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="destinationContainer">
+                        <div class="homeContainer1">
+                            <img class="home" src="../assets/img/search.png" alt="">
+                        </div>
+                    </div>
+
+                    <div class="subSearchBarContainer">
+                        <input class="search" type="text" name="" id="" placeholder="Search...">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="subContainer">
+            <div class="zoomContainer">
+                <div class="zoomInContainer">
+                    <div onclick="zoomIn()" class="subZoomIn">
+                        <p class="plus">+</p>
+                    </div>
+                </div>
+
+                <div onclick="zoomOut()" class="zoomInContainer">
+                    <div class="subZoomIn ">
+                        <p class="plus1">-</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mapContainer">
+                <div style="z-index: -1;" class="subMapContainer">
+                    <img class="map" src="../assets/img/WMSU-MAP.svg" alt="">
+                </div>
+
+                <div class="pinContainer">
+                    <div class="subPinContainer" onclick="popUp1()">
+                        <img class="pin" src="../assets/img/t (1).webp" alt="">
+                    </div>
+
+                    <div class="infoContainer" style="display: none; z-index: 1;">
+                        <div class="subInfoContainer">
+                            <img class="image1" src="../assets/img/CSSPE.JPG" alt="">
+                        </div>
+
+                        <div class="collegeContainer">
+                            <p style="width: 100%;">COLLEGE OF SPORT SCIENCE AND PHYSICAL EDUCATION</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pinContainer1">
+                    <div class="subPinContainer" onclick="popUp3()">
+                        <img class="pin" src="../assets/img/t (1).webp" alt="">
+                    </div>
+
+                    <div class="infoContainer1" style="display: none; z-index: 1">
+                        <div class="subInfoContainer">
+                            <img class="image1" src="../assets/img/CSSPE.JPG" alt="">
+                        </div>
+
+                        <div class="collegeContainer">
+                            <p style="width: 100%;">EXECUTIVE BUILDING</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pinContainer2">
+                    <div class="subPinContainer" onclick="popUp4()">
+                        <img class="pin" src="../assets/img/t (1).webp" alt="">
+                    </div>
+
+                    <div class="infoContainer2" style="display: none; z-index: 1">
+                        <div class="subInfoContainer">
+                            <img class="image1" src="../assets/img/CSSPE.JPG" alt="">
+                        </div>
+
+                        <div class="collegeContainer">
+                            <p style="width: 100%;">RESEARCH CENTER BUILDING</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pinContainer3">
+                    <div class="subPinContainer" onclick="popUp5()">
+                        <img class="pin" src="../assets/img/t (1).webp" alt="">
+                    </div>
+
+                    <div class="infoContainer3" style="display: none; z-index: 1">
+                        <div class="subInfoContainer">
+                            <img class="image1" src="../assets/img/CSSPE.JPG" alt="">
+                        </div>
+
+                        <div class="collegeContainer">
+                            <p style="width: 100%;">COLLEGE OF LAW</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pinContainer4">
+                    <div class="subPinContainer" onclick="popUp6()">
+                        <img class="pin" src="../assets/img/t (1).webp" alt="">
+                    </div>
+
+                    <div class="infoContainer4" style="display: none; z-index: 1">
+                        <div class="subInfoContainer">
+                            <img class="image1" src="../assets/img/CSSPE.JPG" alt="">
+                        </div>
+
+                        <div class="collegeContainer">
+                            <p style="width: 100%;">CPADS</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pinContainer5">
+                    <div class="subPinContainer" onclick="popUp7()">
+                        <img class="pin" src="../assets/img/t (1).webp" alt="">
+                    </div>
+
+                    <div class="infoContainer5" style="display: none; z-index: 1">
+                        <div class="subInfoContainer">
+                            <img class="image1" src="../assets/img/CSSPE.JPG" alt="">
+                        </div>
+
+                        <div class="collegeContainer">
+                            <p style="width: 100%;">CPADS</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pinContainer6">
+                    <div class="subPinContainer" onclick="popUp8()">
+                        <img class="pin" src="../assets/img/t (1).webp" alt="">
+                    </div>
+
+                    <div class="infoContainer6" style="display: none; z-index: 1">
+                        <div class="subInfoContainer">
+                            <img class="image1" src="../assets/img/CSSPE.JPG" alt="">
+                        </div>
+
+                        <div class="collegeContainer">
+                            <p style="width: 100%;">CPADS</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pinContainer7">
+                    <div class="subPinContainer" onclick="popUp9()">
+                        <img class="pin" src="../assets/img/t (1).webp" alt="">
+                    </div>
+
+                    <div class="infoContainer7" style="display: none; z-index: 1">
+                        <div class="subInfoContainer">
+                            <img class="image1" src="../assets/img/CSSPE.JPG" alt="">
+                        </div>
+
+                        <div class="collegeContainer">
+                            <p style="width: 100%;">CPADS</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pinContainer8">
+                    <div class="subPinContainer" onclick="popUp43()">
+                        <img class="pin" src="../assets/img/t (1).webp" alt="">
+                    </div>
+
+                    <div class="infoContainer8" style="display: none; z-index: 1">
+                        <div class="subInfoContainer">
+                            <img class="image1" src="../assets/img/CSSPE.JPG" alt="">
+                        </div>
+
+                        <div class="collegeContainer">
+                            <p style="width: 100%;">CPADS</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pinContainer9">
+                    <div class="subPinContainer" onclick="popUp11()">
+                        <img class="pin" src="../assets/img/t (1).webp" alt="">
+                    </div>
+
+                    <div class="infoContainer9" style="display: none; z-index: 1">
+                        <div class="subInfoContainer">
+                            <img class="image1" src="../assets/img/CSSPE.JPG" alt="">
+                        </div>
+
+                        <div class="collegeContainer">
+                            <p style="width: 100%;">CPADS</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pinContainer10">
+                    <div class="subPinContainer" onclick="popUp12()">
+                        <img class="pin" src="../assets/img/t (1).webp" alt="">
+                    </div>
+
+                    <div class="infoContainer10" style="display: none; z-index: 1">
+                        <div class="subInfoContainer">
+                            <img class="image1" src="../assets/img/CSSPE.JPG" alt="">
+                        </div>
+
+                        <div class="collegeContainer">
+                            <p style="width: 100%;">CPADS</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pinContainer11">
+                    <div class="subPinContainer" onclick="popUp13()">
+                        <img class="pin" src="../assets/img/t (1).webp" alt="">
+                    </div>
+
+                    <div class="infoContainer11" style="display: none; z-index: 1">
+                        <div class="subInfoContainer">
+                            <img class="image1" src="../assets/img/CSSPE.JPG" alt="">
+                        </div>
+
+                        <div class="collegeContainer">
+                            <p style="width: 100%;">CPADS</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pinContainer12">
+                    <div class="subPinContainer" onclick="popUp14()">
+                        <img class="pin" src="../assets/img/t (1).webp" alt="">
+                    </div>
+
+                    <div class="infoContainer12" style="display: none; z-index: 1">
+                        <div class="subInfoContainer">
+                            <img class="image1" src="../assets/img/CSSPE.JPG" alt="">
+                        </div>
+
+                        <div class="collegeContainer">
+                            <p style="width: 100%;">CPADS</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pinContainer13">
+                    <div class="subPinContainer" onclick="popUp15()">
+                        <img class="pin" src="../assets/img/t (1).webp" alt="">
+                    </div>
+
+                    <div class="infoContainer13" style="display: none; z-index: 1">
+                        <div class="subInfoContainer">
+                            <img class="image1" src="../assets/img/CSSPE.JPG" alt="">
+                        </div>
+
+                        <div class="collegeContainer">
+                            <p style="width: 100%;">CPADS</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pinContainer14">
+                    <div class="subPinContainer" onclick="popUp16()">
+                        <img class="pin" src="../assets/img/t (1).webp" alt="">
+                    </div>
+
+                    <div class="infoContainer14" style="display: none; z-index: 1">
+                        <div class="subInfoContainer">
+                            <img class="image1" src="../assets/img/CSSPE.JPG" alt="">
+                        </div>
+
+                        <div class="collegeContainer">
+                            <p style="width: 100%;">CPADS</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pinContainer15">
+                    <div class="subPinContainer" onclick="popUp17()">
+                        <img class="pin" src="../assets/img/t (1).webp" alt="">
+                    </div>
+
+                    <div class="infoContainer15" style="display: none; z-index: 1">
+                        <div class="subInfoContainer">
+                            <img class="image1" src="../assets/img/CSSPE.JPG" alt="">
+                        </div>
+
+                        <div class="collegeContainer">
+                            <p style="width: 100%;">CPADS</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pinContainer16">
+                    <div class="subPinContainer" onclick="popUp18()">
+                        <img class="pin" src="../assets/img/t (1).webp" alt="">
+                    </div>
+
+                    <div class="infoContainer16" style="display: none; z-index: 1">
+                        <div class="subInfoContainer">
+                            <img class="image1" src="../assets/img/CSSPE.JPG" alt="">
+                        </div>
+
+                        <div class="collegeContainer">
+                            <p style="width: 100%;">CPADS</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pinContainer17">
+                    <div class="subPinContainer" onclick="popUp19()">
+                        <img class="pin" src="../assets/img/t (1).webp" alt="">
+                    </div>
+
+                    <div class="infoContainer17" style="display: none; z-index: 1">
+                        <div class="subInfoContainer">
+                            <img class="image1" src="../assets/img/CSSPE.JPG" alt="">
+                        </div>
+
+                        <div class="collegeContainer">
+                            <p style="width: 100%;">CPADS</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pinContainer18">
+                    <div class="subPinContainer" onclick="popUp20()">
+                        <img class="pin" src="../assets/img/t (1).webp" alt="">
+                    </div>
+
+                    <div class="infoContainer18" style="display: none; z-index: 1">
+                        <div class="subInfoContainer">
+                            <img class="image1" src="../assets/img/CSSPE.JPG" alt="">
+                        </div>
+
+                        <div class="collegeContainer">
+                            <p style="width: 100%;">CPADS</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pinContainer19">
+                    <div class="subPinContainer" onclick="popUp21()">
+                        <img class="pin" src="../assets/img/t (1).webp" alt="">
+                    </div>
+
+                    <div class="infoContainer19" style="display: none; z-index: 1">
+                        <div class="subInfoContainer">
+                            <img class="image1" src="../assets/img/CSSPE.JPG" alt="">
+                        </div>
+
+                        <div class="collegeContainer">
+                            <p style="width: 100%;">CPADS</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pinContainer20">
+                    <div class="subPinContainer" onclick="popUp22()">
+                        <img class="pin" src="../assets/img/t (1).webp" alt="">
+                    </div>
+
+                    <div class="infoContainer20" style="display: none; z-index: 1">
+                        <div class="subInfoContainer">
+                            <img class="image1" src="../assets/img/CSSPE.JPG" alt="">
+                        </div>
+
+                        <div class="collegeContainer">
+                            <p style="width: 100%;">CPADS</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pinContainer21">
+                    <div class="subPinContainer" onclick="popUp23()">
+                        <img class="pin" src="../assets/img/t (1).webp" alt="">
+                    </div>
+
+                    <div class="infoContainer21" style="display: none; z-index: 1">
+                        <div class="subInfoContainer">
+                            <img class="image1" src="../assets/img/CSSPE.JPG" alt="">
+                        </div>
+
+                        <div class="collegeContainer">
+                            <p style="width: 100%;">CPADS</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pinContainer22">
+                    <div class="subPinContainer" onclick="popUp24()">
+                        <img class="pin" src="../assets/img/t (1).webp" alt="">
+                    </div>
+
+                    <div class="infoContainer22" style="display: none; z-index: 1">
+                        <div class="subInfoContainer">
+                            <img class="image1" src="../assets/img/CSSPE.JPG" alt="">
+                        </div>
+
+                        <div class="collegeContainer">
+                            <p style="width: 100%;">CPADS</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pinContainer23">
+                    <div class="subPinContainer" onclick="popUp25()">
+                        <img class="pin" src="../assets/img/t (1).webp" alt="">
+                    </div>
+
+                    <div class="infoContainer23" style="display: none; z-index: 1">
+                        <div class="subInfoContainer">
+                            <img class="image1" src="../assets/img/CSSPE.JPG" alt="">
+                        </div>
+
+                        <div class="collegeContainer">
+                            <p style="width: 100%;">CPADS</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pinContainer24">
+                    <div class="subPinContainer" onclick="popUp26()">
+                        <img class="pin" src="../assets/img/t (1).webp" alt="">
+                    </div>
+
+                    <div class="infoContainer24" style="display: none; z-index: 1">
+                        <div class="subInfoContainer">
+                            <img class="image1" src="../assets/img/CSSPE.JPG" alt="">
+                        </div>
+
+                        <div class="collegeContainer">
+                            <p style="width: 100%;">CPADS</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pinContainer25">
+                    <div class="subPinContainer" onclick="popUp27()">
+                        <img class="pin" src="../assets/img/t (1).webp" alt="">
+                    </div>
+
+                    <div class="infoContainer25" style="display: none; z-index: 1">
+                        <div class="subInfoContainer">
+                            <img class="image1" src="../assets/img/CSSPE.JPG" alt="">
+                        </div>
+
+                        <div class="collegeContainer">
+                            <p style="width: 100%;">CPADS</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pinContainer26">
+                    <div class="subPinContainer" onclick="popUp28()">
+                        <img class="pin" src="../assets/img/t (1).webp" alt="">
+                    </div>
+
+                    <div class="infoContainer26" style="display: none; z-index: 1">
+                        <div class="subInfoContainer">
+                            <img class="image1" src="../assets/img/CSSPE.JPG" alt="">
+                        </div>
+
+                        <div class="collegeContainer">
+                            <p style="width: 100%;">CPADS</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pinContainer27">
+                    <div class="subPinContainer" onclick="popUp29()">
+                        <img class="pin" src="../assets/img/t (1).webp" alt="">
+                    </div>
+
+                    <div class="infoContainer27" style="display: none; z-index: 1">
+                        <div class="subInfoContainer">
+                            <img class="image1" src="../assets/img/CSSPE.JPG" alt="">
+                        </div>
+
+                        <div class="collegeContainer">
+                            <p style="width: 100%;">CPADS</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pinContainer28">
+                    <div class="subPinContainer" onclick="popUp291()">
+                        <img class="pin" src="../assets/img/t (1).webp" alt="">
+                    </div>
+
+                    <div class="infoContainer28" style="display: none; z-index: 1">
+                        <div class="subInfoContainer">
+                            <img class="image1" src="../assets/img/CSSPE.JPG" alt="">
+                        </div>
+
+                        <div class="collegeContainer">
+                            <p style="width: 100%;">CPADS</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pinContainer29">
+                    <div class="subPinContainer" onclick="popUp30()">
+                        <img class="pin" src="../assets/img/t (1).webp" alt="">
+                    </div>
+
+                    <div class="infoContainer29" style="display: none; z-index: 1">
+                        <div class="subInfoContainer">
+                            <img class="image1" src="../assets/img/CSSPE.JPG" alt="">
+                        </div>
+
+                        <div class="collegeContainer">
+                            <p style="width: 100%;">CPADS</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pinContainer30">
+                    <div class="subPinContainer" onclick="popUp31()">
+                        <img class="pin" src="../assets/img/t (1).webp" alt="">
+                    </div>
+
+                    <div class="infoContainer30" style="display: none; z-index: 1">
+                        <div class="subInfoContainer">
+                            <img class="image1" src="../assets/img/CSSPE.JPG" alt="">
+                        </div>
+
+                        <div class="collegeContainer">
+                            <p style="width: 100%;">CPADS</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pinContainer31">
+                    <div class="subPinContainer" onclick="popUp32()">
+                        <img class="pin" src="../assets/img/t (1).webp" alt="">
+                    </div>
+
+                    <div class="infoContainer31" style="display: none; z-index: 1">
+                        <div class="subInfoContainer">
+                            <img class="image1" src="../assets/img/CSSPE.JPG" alt="">
+                        </div>
+
+                        <div class="collegeContainer">
+                            <p style="width: 100%;">CPADS</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pinContainer32">
+                    <div class="subPinContainer" onclick="popUp33()">
+                        <img class="pin" src="../assets/img/t (1).webp" alt="">
+                    </div>
+
+                    <div class="infoContainer32" style="display: none; z-index: 1">
+                        <div class="subInfoContainer">
+                            <img class="image1" src="../assets/img/CSSPE.JPG" alt="">
+                        </div>
+
+                        <div class="collegeContainer">
+                            <p style="width: 100%;">CPADS</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pinContainer33">
+                    <div class="subPinContainer" onclick="popUp34()">
+                        <img class="pin" src="../assets/img/t (1).webp" alt="">
+                    </div>
+
+                    <div class="infoContainer33" style="display: none; z-index: 1">
+                        <div class="subInfoContainer">
+                            <img class="image1" src="../assets/img/CSSPE.JPG" alt="">
+                        </div>
+
+                        <div class="collegeContainer">
+                            <p style="width: 100%;">CPADS</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pinContainer34">
+                    <div class="subPinContainer" onclick="popUp35()">
+                        <img class="pin" src="../assets/img/t (1).webp" alt="">
+                    </div>
+
+                    <div class="infoContainer34" style="display: none; z-index: 1">
+                        <div class="subInfoContainer">
+                            <img class="image1" src="../assets/img/CSSPE.JPG" alt="">
+                        </div>
+
+                        <div class="collegeContainer">
+                            <p style="width: 100%;">CPADS</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pinContainer35">
+                    <div class="subPinContainer" onclick="popUp36()">
+                        <img class="pin" src="../assets/img/t (1).webp" alt="">
+                    </div>
+
+                    <div class="infoContainer35" style="display: none; z-index: 1">
+                        <div class="subInfoContainer">
+                            <img class="image1" src="../assets/img/CSSPE.JPG" alt="">
+                        </div>
+
+                        <div class="collegeContainer">
+                            <p style="width: 100%;">CPADS</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pinContainer36">
+                    <div class="subPinContainer" onclick="popUp37()">
+                        <img class="pin" src="../assets/img/t (1).webp" alt="">
+                    </div>
+
+                    <div class="infoContainer36" style="display: none; z-index: 1">
+                        <div class="subInfoContainer">
+                            <img class="image1" src="../assets/img/CSSPE.JPG" alt="">
+                        </div>
+
+                        <div class="collegeContainer">
+                            <p style="width: 100%;">CPADS</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="pinContainer37">
+                    <div class="subPinContainer" onclick="popUp38()">
+                        <img class="pin" src="../assets/img/t (1).webp" alt="">
+                    </div>
+
+                    <div class="infoContainer37" style="display: none; z-index: 1">
+                        <div class="subInfoContainer">
+                            <img class="image1" src="../assets/img/CSSPE.JPG" alt="">
+                        </div>
+
+                        <div class="collegeContainer">
+                            <p style="width: 100%;">CPADS</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pinContainer38">
+                    <div class="subPinContainer" onclick="popUp39()">
+                        <img class="pin" src="../assets/img/t (1).webp" alt="">
+                    </div>
+
+                    <div class="infoContainer38" style="display: none; z-index: 1">
+                        <div class="subInfoContainer">
+                            <img class="image1" src="../assets/img/CSSPE.JPG" alt="">
+                        </div>
+
+                        <div class="collegeContainer">
+                            <p style="width: 100%;">CPADS</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pinContainer39">
+                    <div class="subPinContainer" onclick="popUp40()">
+                        <img class="pin" src="../assets/img/t (1).webp" alt="">
+                    </div>
+
+                    <div class="infoContainer39" style="display: none; z-index: 1">
+                        <div class="subInfoContainer">
+                            <img class="image1" src="../assets/img/CSSPE.JPG" alt="">
+                        </div>
+
+                        <div class="collegeContainer">
+                            <p style="width: 100%;">CPADS</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pinContainer40">
+                    <div class="subPinContainer" onclick="popUp41()">
+                        <img class="pin" src="../assets/img/t (1).webp" alt="">
+                    </div>
+
+                    <div class="infoContainer40" style="display: none; z-index: 1">
+                        <div class="subInfoContainer">
+                            <img class="image1" src="../assets/img/CSSPE.JPG" alt="">
+                        </div>
+
+                        <div class="collegeContainer">
+                            <p style="width: 100%;">CPADS</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pinContainer41">
+                    <div class="subPinContainer" onclick="popUp42()">
+                        <img class="pin" src="../assets/img/t (1).webp" alt="">
+                    </div>
+
+                    <div class="infoContainer41" style="display: none; z-index: 1">
+                        <div class="subInfoContainer">
+                            <img class="image1" src="../assets/img/CSSPE.JPG" alt="">
+                        </div>
+
+                        <div class="collegeContainer">
+                            <p style="width: 100%;">CPADS</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../assets/js/map.js"></script>
+</body>
+</html>
